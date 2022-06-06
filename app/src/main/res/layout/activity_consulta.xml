@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/background"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ActivityConsulta">
+
+  <LinearLayout
+      android:id="@+id/linearlayout2"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <EditText
+        android:id="@+id/txtcid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        android:hint="Buscar Id"/>
+
+    <Button
+        android:id="@+id/btnbuscar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Buscar" />
+
+  </LinearLayout>
+
+  <EditText
+      android:id="@+id/txtcnombres"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:ems="10"
+      android:inputType="textPersonName"
+      android:text=""
+      android:hint="Nombres"/>
+
+
+  <EditText
+      android:id="@+id/txtcapellidos"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:ems="10"
+      android:inputType="textPersonName"
+      android:text=""
+      android:hint="Apellidos"/>
+
+
+  <EditText
+      android:id="@+id/txtccorreo"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:ems="10"
+      android:inputType="textPersonName"
+      android:text=""
+      android:hint="Correo"/>
+
+  <EditText
+      android:id="@+id/txtcedad"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:ems="10"
+      android:inputType="textPersonName"
+      android:text=""
+      android:hint="Edad"/>
+
+
+  <LinearLayout
+      android:id="@+id/linearlayout3"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/btneliminar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Eliminar" />
+
+    <Button
+        android:id="@+id/btnactualizar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Actualizar" />
+
+  </LinearLayout>
+  </LinearLayout>
