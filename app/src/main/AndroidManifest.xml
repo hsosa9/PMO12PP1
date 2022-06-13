@@ -11,15 +11,21 @@
         android:theme="@style/Theme.PMO12PP1">
         <activity
             android:name=".ActivityList"
-            android:exported="false" />
-        <activity
-            android:name=".ActivityConsulta"
-            android:exported="true">
+            android:exported="true" >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+      </activity>
+
+
+        <activity
+            android:name=".ActivityConsulta"
+            android:exported="true">
+
         </activity>
         <activity
             android:name=".ActivityCrear"
