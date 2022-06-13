@@ -38,6 +38,9 @@ public class ActivityCrear extends AppCompatActivity {
         });
     }
 
+
+
+
     private void init (){
         txtNombre = (EditText) findViewById(R.id.txtNombre);
         txtApellido = (EditText) findViewById(R.id.txtApellido);

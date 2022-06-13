@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PMO12PP1">
         <activity
+            android:name=".ActivityList"
+            android:exported="false" />
+        <activity
             android:name=".ActivityConsulta"
             android:exported="true">
             <intent-filter>
@@ -20,15 +23,13 @@
         </activity>
         <activity
             android:name=".ActivityCrear"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".MainActivity2"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>

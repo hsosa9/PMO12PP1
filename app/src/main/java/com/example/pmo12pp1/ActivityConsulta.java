@@ -36,32 +36,50 @@ public class ActivityConsulta extends AppCompatActivity {
     }
 
     private void BuscarEmpleado() {
-        SQLiteDatabase db = conexion.getWritableDatabase();
-        //Parametros de busqueda de la sentencia Select
+        try{
 
-        String [] params = {id.getText().toString()};
+            SQLiteDatabase db = conexion.getWritableDatabase();
+            //Parametros de busqueda de la sentencia Select
 
-        //Campos a retornar de la sentencia Select
+            String [] params = {id.getText().toString()};
 
-        String [] fields = {Transacciones.nombres,
-                            Transacciones.apellidos,
-                            Transacciones.correo,
-                            Transacciones.edad};
+            //Campos a retornar de la sentencia Select
 
-        String WhereCondition = Transacciones.id + "=?";
+            String [] fields = {Transacciones.nombres,
+                    Transacciones.apellidos,
+                    Transacciones.correo,
+                    Transacciones.edad};
 
-        Cursor cdata = db.query(Transacciones.tablaEmpleados,
-                               fields,
-                               WhereCondition, params, null, null, null);
+            String WhereCondition = Transacciones.id + "=?";
 
-        cdata.moveToFirst();
+            Cursor cdata = db.query(Transacciones.tablaEmpleados,
+                    fields,
+                    WhereCondition, params, null, null, null);
 
-        nombres.setText(cdata.getString(0));
-        apellidos.setText(cdata.getString(1));
-        correo.setText(cdata.getString(2));
-        edad.setText(cdata.getString(3));
+            cdata.moveToFirst();
 
-        Toast.makeText(this, "Consultado con exito", Toast.LENGTH_LONG).show();
+            if (cdata.getCount()>0){
+
+                nombres.setText(cdata.getString(0));
+                apellidos.setText(cdata.getString(1));
+                correo.setText(cdata.getString(2));
+                edad.setText(cdata.getString(3));
+
+                Toast.makeText(this, "Consultado con exito", Toast.LENGTH_LONG).show();
+            }
+            Toast.makeText(this, "No Hay Datos" + "", Toast.LENGTH_LONG).show();
+
+
+        }
+        catch (Exception ex){
+            Toast.makeText(this, "Error" + "", Toast.LENGTH_LONG).show();
+        }
+
+
+    }
+
+    private void Eliminar(){
+
     }
 
     public void init (){
