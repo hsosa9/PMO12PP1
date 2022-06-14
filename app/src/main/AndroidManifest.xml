@@ -10,8 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PMO12PP1">
         <activity
-            android:name=".ActivityList"
-            android:exported="true" >
+            android:name=".ActivityCombo"
+            android:exported="true">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,17 +19,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
-      </activity>
-
-
+        </activity> android:name=""
         <activity
-            android:name=".ActivityConsulta"
+            android:name=".ActivityList"
             android:exported="true">
 
         </activity>
         <activity
-            android:name=".ActivityCrear"
+            android:name=".ActivityConsulta"
             android:exported="true"></activity>
+        <activity
+            android:name=".ActivityCrear"
+            android:exported="true" />
         <activity
             android:name=".MainActivity2"
             android:exported="true" />
